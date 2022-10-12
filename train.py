@@ -61,8 +61,8 @@ def main(params):
         
 
     Align=modelconfig["Align"]
-    pds_train = ProteinTranslationDataset(opts.trainset, device=device, Align=Align, returnlabel=False)
-    pds_val = ProteinTranslationDataset(opts.valset, device=device, Unalign=Unalign, returnlabel=True)
+    pds_train = ProteinDataset(opts.trainset, device=device, Align=Align, returnlabel=False)
+    pds_val = ProteinDataset(opts.valset, device=device, Unalign=Unalign, returnlabel=True)
     len_input = pds_train[0].shape[0]
 
     
